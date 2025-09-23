@@ -64,6 +64,14 @@ export default function FelfelKitchen() {
     }
   }
 
+  const handleOrderNowClick = () => {
+    const zomatoWeb = "https://www.zomato.com/pune/felfel-kitchen-mundhwa/order";
+    const zomatoApp = "https://zomato.onelink.me/xqzv/nkobpyqw";
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const zomatoUrl = isMobile ? zomatoApp : zomatoWeb;
+    window.open(zomatoUrl, "_blank");
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
       {/* Header */}
@@ -84,7 +92,7 @@ export default function FelfelKitchen() {
               </div>
               <Button
                 className="bg-red-600 hover:bg-red-700 text-white"
-                onClick={() => (window.location.href = "tel:+918983770199")}
+                onClick={handleOrderNowClick}
               >
                 Order Now
               </Button>
@@ -101,7 +109,7 @@ export default function FelfelKitchen() {
           >
             <h2 className="text-5xl md:text-6xl font-bold text-amber-900 mb-6 text-balance">
               Taste the Authentic
-              <span className="text-red-600 block">North East</span>
+              <span className="text-red-600 block">North East Food</span>
             </h2>
             <p className="text-xl text-amber-800 mb-8 max-w-2xl mx-auto text-pretty">
               Experience the rich flavors and traditional recipes from the beautiful North Eastern states of India,
@@ -111,9 +119,8 @@ export default function FelfelKitchen() {
               <Button
                 size="lg"
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-3"
-                onClick={() => (window.location.href = "tel:+918983770199")}
+                onClick={handleOrderNowClick}
               >
-                <Phone className="w-5 h-5 mr-2" />
                 Order Now
               </Button>
             </div>
@@ -308,7 +315,7 @@ export default function FelfelKitchen() {
                   onClick={() => (window.location.href = "tel:+918983770199")}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call +91-8983770199
+                  Call +91-8983770199z
                 </Button>
                 <Button
                   size="lg"
