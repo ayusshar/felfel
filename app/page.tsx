@@ -315,7 +315,7 @@ export default function FelfelKitchen() {
                   onClick={() => (window.location.href = "tel:+918983770199")}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call +91-8983770199z
+                  Call +91-8983770199
                 </Button>
                 <Button
                   size="lg"
